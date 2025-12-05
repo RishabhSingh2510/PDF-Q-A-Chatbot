@@ -1,6 +1,6 @@
-📘 Q&A Chatbot using LangChain, FAISS & Ollama
+# 📘 Q&A Chatbot using LangChain, FAISS & Ollama
 
-This project implements a PDF-based Question-Answering Chatbot built using:
+This project implements a **PDF-based Question-Answering** Chatbot built using:
 
 LangChain (LLM orchestration)
 
@@ -12,16 +12,21 @@ Embeddings-based document retrieval
 
 The chatbot allows users to upload PDF files, process them into embeddings, store them locally, and then ask natural-language questions about the content.
 
-🚀 Features
+## 🚀 Features
 
 ✔ Load and process PDF documents
+
 ✔ Extract text and create embeddings
+
 ✔ Store vectors in FAISS for fast retrieval
+
 ✔ Retrieve context based on user queries
+
 ✔ Generate answers using an Ollama LLM model
+
 ✔ Runs fully locally, no external API required
 
-🧠 How It Works
+## 🧠 How It Works
 
 Load PDF → Text extraction from pages
 
@@ -33,40 +38,40 @@ User Query → Embed + search nearest chunks
 
 Ollama LLM → Generate final response based on retrieved context
 
-📁 Project Structure
-.
+## 📁 Project Structure
+```
 ├── QAChatbot.ipynb           # Main notebook
 ├── requirements.txt          # Project dependencies
 ├── README.md                 # Project documentation
-└── data/                     # (Optional) PDF files
+└── data/                     # PDF files
+```
 
-🛠 Installation
+## 🛠 Installation
 
-Create an environment and install dependencies:
+Install dependencies:
 
-pip install -r requirements.txt
+`pip install -r requirements.txt`
 
 
-Make sure Ollama is installed and running:
-
-Install: https://ollama.com/download
+## Install and run Ollama:
+https://ollama.com/download
 
 Pull a model (example):
 
-ollama pull phi
+`ollama pull phi`
 
-▶️ Running the Notebook
+## ▶️ Running the Notebook
 
 Start Jupyter:
 
-jupyter notebook
+`jupyter notebook`
 
 
 Open QAChatbot.ipynb and run all cells.
 
-📄 Requirements
+## 📄 Requirements
 
-The project uses the following key libraries:
+### Key libraries:
 
 langchain
 
@@ -82,21 +87,21 @@ python-dotenv
 
 Full list is in requirements.txt.
 
-📚 Example Workflow
+## 📚 Example Workflow
 
 Place your PDF into the data/ folder.
 
-Run the notebook/script.
+Run the notebook or script.
 
 The system loads the PDF, creates embeddings, and builds a FAISS index.
 
-Ask any question — the chatbot finds relevant chunks and generates an answer.
+Ask any question — the chatbot retrieves relevant chunks and generates an answer.
 
-🧩 Customization
+## 🧩 Customization
 
-You can modify:
+### You can modify:
 
-The PDF loader
+PDF loader
 
 Chunk size
 
@@ -106,14 +111,12 @@ Ollama model version
 
 Retrieval strategy
 
-🛡 Notes
+## 🛡 Notes
 
 No API keys are required unless you swap Ollama for an API-based LLM.
 
-Ensure .env is excluded using .gitignore.
+Embedding may take longer for large PDFs.
 
-For large PDFs, embedding might take more time.
-
-🤝 Contributing
+## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
